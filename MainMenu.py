@@ -8,6 +8,7 @@ import kpsminipeli as m5
 import boardgame
 import Hirsipuuminipeli as hangman
 import simppelikolikkominipeli as coin
+import Sanan_arvaus_minipeli as m6
 
 while True:
     os.system('cls')
@@ -50,7 +51,7 @@ while True:
             
     if valinta == 'f':
         os.system('cls')
-        valikko = [["............................"],[".   Mitä  Peliä  Haluat    ."],[".         Pelata?          ."],[".(1)Type   (2)XO   (3)Ammu ."],[".  (4)Laske     (5)KPS     ."],["............................"]]
+        valikko = [["............................"],[".   Mitä  Peliä  Haluat    ."],[".         Pelata?          ."],[".(1)Type   (2)XO   (3)Ammu ."],[".(4)Laske  (5)KPS  (6)Puu  ."],[".(7)Coin   (8)Sana         ."],["............................"]]
         for line in valikko:
             print(' '.join(line))
         kysy = input("")
@@ -98,4 +99,8 @@ while True:
         if kysy == '7':
             os.system('cls')
             mg = coin.coinflip()
+        
+        if kysy == '8':
+            os.system('cls')
+            mg = m6.piilotettu_sana_peli()
 

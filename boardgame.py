@@ -6,10 +6,11 @@ import kpsminipeli as kps
 import minigame4 as matematiikka
 import minigame1 as writing
 import minigame2 as tictactoe
-import Triviankysymykset_samuel as trivia
+import Triviankysymykset as trivia
 import simppelikolikkominipeli as coin
 import Hirsipuuminipeli as hangman
 import minigame3 as shootergame
+import Sanan_arvaus_minipeli as m6
 
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
@@ -88,7 +89,7 @@ def Turns(amount):
                                         time.sleep(1)
                                         print(f"Minipeli alkaa {countdown}...")
                                         countdown -= 1
-                                game = random.randint(1,7)
+                                game = random.randint(1,8)
                                 if game == 1:
                                     result = kps.Minipelikivipaperisakset()
                                 elif game == 2:
@@ -103,6 +104,8 @@ def Turns(amount):
                                         result = hangman.hirsipuu()
                                 elif game == 7:
                                         result = shootergame.game(10)
+                                elif game == 8:
+                                        result = m6.piilotettu_sana_peli()
                                                 
                                 if result == "Voitto":
                                         players[player_id]["roll"] = roll_dice()
